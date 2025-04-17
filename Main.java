@@ -1,8 +1,21 @@
 package ed01;
 
+/**
+ * Classe principal que controla o jogo de adivinhação de números.
+ * @author Daniel Tomaz Dal Cortivo
+ * @see Jogador
+ * @see Jogo
+ * @see Placar
+ */
 import java.util.Scanner;
 
+/**
+ * Método principal do jogo Responsável por coletar o nome do jogador via {@link Scanner}, iniciar o loop principal
+ * do jogo e gerenciar as interações entre as classes {@link Jogador}, {@link Jogo} e {@link Placar}.
+ */
+
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanfj = new Scanner(System.in);
         Placar placar = new Placar();
