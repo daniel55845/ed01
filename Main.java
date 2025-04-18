@@ -2,6 +2,7 @@ package ed01;
 
 /**
  * Classe principal que controla o jogo de adivinhação de números.
+ * 
  * @author Daniel Tomaz Dal Cortivo
  * @see Jogador
  * @see Jogo
@@ -17,10 +18,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scanfj = new Scanner(System.in);
+
         Placar placar = new Placar();
 
-        System.out.println("Bem-vindo ao Jogo de Adivinhação!");
+        System.out.println("============ O Jogo da Adivinhação! ===============");
+
         System.out.print("Digite o seu nome: ");
         String nomeJogador = scanfj.nextLine();
 
@@ -31,22 +35,33 @@ public class Main {
         boolean acertou = false;
 
         while (!acertou) {
+
             System.out.print("Sua tentativa: ");
+
             int tentativa = scanfj.nextInt();
+            
             String resultado = jogo.jogar(tentativa);
+            
             System.out.print("\033[H\033[2J"); // limpa a tela do console em cada tentativa 
+            
             System.out.println(resultado);
 
-            if ("Acertou!".equals(resultado)) {
+            if (resultado == "Acertou o numero secreto!") {
+
+                
+                System.out.println("voce ganhou O Jogo da Adivinhação !!");
+                
                 acertou = true;
+
             }
         }
 
-        System.out.printf("Você acertou em %d tentativas e sua pontuação final foi %d de 100.%n",
-                jogador.getTentativas(), jogador.getPontuacao());
+        System.out.printf("\n===============================================================\n");
+        System.out.printf("Você acertou em %d tentativas e sua pontuação final foi %d de 100.%n",jogador.getTentativas(), jogador.getPontuacao());
+        System.out.printf("=================================================================\n");
 
         placar.adicionarJogador(jogador);
-        placar.mostrarRanking();
+        placar.mostra_Ranking();
 
         scanfj.close();
     }
