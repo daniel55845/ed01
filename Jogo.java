@@ -3,7 +3,7 @@ package ed01;
 import java.util.Random;
 
 /**
- * Controla a lógica principal do jogo de adivinhação numérica 
+ * Controla a lógica principal do jogo.
  * @author Daniel Tomaz Dal Cortivo
  */
 public class Jogo {
