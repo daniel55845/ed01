@@ -3,8 +3,7 @@ package ed01;
 import java.util.ArrayList;
 
 /**
- * Armazena e exibe o ranking de jogadores com suas pontuações.
- * 
+ * guarda e exibe o ranking dos jogadores com as pontuações.
  * @author Daniel Tomaz Dal Cortivo
  * @see Jogador
  */
