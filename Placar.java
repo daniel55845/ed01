@@ -10,31 +10,32 @@ import java.util.ArrayList;
  */
 
 public class Placar {
+
     private ArrayList<Jogador> ranking;
-
-    /**
-     * Inicializa um placar vazio.
-     */
+    
     public Placar() {
+        
         this.ranking = new ArrayList<>();
+        
     }
 
-    /**
-     * Adiciona um jogador ao ranking
-     */
+    
     public void adicionarJogador(Jogador jogador) {
+        
         this.ranking.add(jogador);
+        
     }
 
-    /**
-     * Exibe o ranking de jogadores
-     */
-    public void mostrarRanking() {
+    public void mostra_Ranking() {
+
         System.out.println("Ranking dos Jogadores:");
+
         for (Jogador jogador : ranking) {
-            System.out.printf("%s - pontuação %d/100%n", 
-                jogador.getNome(), 
-                jogador.getPontuacao());
+            
+            System.out.printf("%s - pontuação %d/100%n", jogador.getNome(),  jogador.getPontuacao());
+            
         }
+        
+        System.out.println("===============================================================");
     }
 }
